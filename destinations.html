@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destinations</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="img/logo.svg" alt="Logo">Logo</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box-sub">
+            <h1>Destinations</h1>
+        </div>
+    </section>
+
+    <section class="main">
+        <section class="search-bar">
+            <div class="container">
+                <input type="text" id="search" placeholder="Search by region...">
+                <button onclick="searchDestinations()">Search</button>
+            </div>
+        </section>
+
+        <section class="destinations-detail">
+                <article class="destination-col">
+                    <img src="img/maldives2.jpg" alt="Maldives">
+                    <div class="destination-title">
+                        <h2>Maldives</h2>
+                        <p>$500 - $5000</p>
+                    </div>
+                    <div class="destination-icons">
+                        <p>Experience the Maldives' stunning coral reefs, crystal-clear waters, and luxurious overwater bungalows, perfect for a tropical getaway.</p>
+                        <img src="img/sunny.svg" alt="Sunny"><p>Sunny</p>
+                        <img src="img/plane.svg" alt="Plane"><p>Plane</p>
+                        <a class="more-btn" data-destination="maldives">More</a>
+                    </div>
+                    <div class="destination-info" style="display: none">
+                        <p><strong>Location:</strong> The Maldives, located in the Indian Ocean southwest of Sri Lanka and India, is an archipelago consisting of 26 atolls.</p>
+                        <p><strong>Culture:</strong> The Maldives boasts a unique cultural heritage influenced by South Indian, Sinhalese, and Arab traditions, reflected in its language, cuisine, and customs.</p>
+                        <p><strong>Top Attractions:</strong> Visitors to the Maldives can explore breathtaking coral reefs teeming with marine life, dine at underwater restaurants for a one-of-a-kind experience, and indulge in luxury accommodations on private islands.</p>
+                        <p><strong>Places to Stay:</strong> Experience unparalleled luxury at resorts such as Soneva Fushi, Conrad Maldives Rangali Island, and Anantara Kihavah Maldives Villas, offering world-class amenities and stunning natural surroundings.</p>
+                        <p><strong>General Tips:</strong> The best time to visit the Maldives is from November to April when the weather is dry and ideal for outdoor activities such as diving, snorkeling, and beach relaxation.</p>
+                        <p><strong>Transport Options:</strong> Speedboats, seaplanes, and domestic flights available</p>
+                        <div class="reservation-btn">
+                            <button onclick="makeReservation('Maldives')">Make a Reservation</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="destination-col">
+                    <img src="img/bora-bora.jpg" alt="Bora Bora">
+                    <div class="destination-title">
+                        <h2>Bora Bora</h2>
+                        <p>$800 - $6000</p>
+                    </div>
+                    <div class="destination-icons">
+                        <p>Bora Bora's turquoise lagoon and iconic overwater bungalows offer an idyllic escape in the heart of French Polynesia.</p>
+                        <img src="img/sunny.svg" alt="Sunny"><p>Sunny</p>
+                        <img src="img/plane.svg" alt="Plane"><p>Plane</p>
+                        <a class="more-btn" data-destination="borabora">More</a>
+                    </div>
+                    <div class="destination-info" style="display: none">
+                        <p><strong>Location:</strong> Bora Bora is located in the South Pacific Ocean and is part of French Polynesia, known for its stunning turquoise waters and lush tropical landscapes.</p>
+                        <p><strong>Culture:</strong> Bora Bora boasts a rich Polynesian culture infused with French influences, evident in its language, cuisine, and traditional arts.</p>
+                        <p><strong>Top Attractions:</strong> Visitors to Bora Bora can't miss iconic landmarks such as Mount Otemanu, Matira Beach renowned for its powdery white sands, and Coral Gardens.</p>
+                        <p><strong>Places to Stay:</strong> Experience luxury and comfort at resorts like Four Seasons Resort Bora Bora, St. Regis Bora Bora Resort, and InterContinental Bora Bora Resort & Thalasso Spa.</p>
+                        <p><strong>General Tips:</strong> The best time to visit Bora Bora is from May to October, during the dry season, when the weather is pleasant for outdoor activities and water sports.</p>
+                        <p><strong>Transport Options:</strong>Boat transfers to different motus (small islets), taxis, and bicycles</p>
+                        <div class="reservation-btn">
+                            <button onclick="makeReservation('Bora Bora')">Make a Reservation</button>
+                        </div>
+                    </div>
+
+                </article>
+
+                <article class="destination-col">
+                    <img src="img/swiss-alps.jpg" alt="Swiss Alps">
+                    <div class="destination-title">
+                        <h2>Swiss Alps</h2>
+                        <p>$200 - $1500</p>
+                    </div>
+                    <div class="destination-icons">
+                        <p>The Swiss Alps boast breathtaking mountain scenery, world-class skiing, and charming alpine villages for a perfect winter retreat.</p>
+                        <img src="img/snowflake.svg" alt="Sunny"><p>Snowy</p>
+                        <img src="img/bus.svg" alt="Plane"><p>Bus</p>
+                        <a class="more-btn" data-destination="swiss-alphs">More</a>
+                    </div>
+                    <div class="destination-info" style="display: none">
+                        <p><strong>Location:</strong> The Swiss Alps are located in Central Europe, spanning Switzerland and parts of neighboring countries.</p>
+                        <p><strong>Culture:</strong> The Swiss Alps are rich in alpine traditions influenced by the country's diverse linguistic regions, including German, French, and Italian cultures.</p>
+                        <p><strong>Top Attractions:</strong> Visitors to the Swiss Alps can explore iconic landmarks such as the Matterhorn, the Jungfraujoch railway station offering panoramic views, and the picturesque Lake Geneva.</p>
+                        <p><strong>Places to Stay:</strong> Experience luxury and comfort at renowned mountain resorts like The Chedi Andermatt, Grand Hotel Kronenhof in Pontresina, and the historic Badrutt's Palace Hotel in St. Moritz.</p>
+                        <p><strong>General Tips:</strong> For skiing and winter sports enthusiasts, the ideal time is from December to March. For hiking and outdoor adventures, plan your visit from June to September.</p>
+                        <p><strong>Transport Options:</strong> Scenic trains like the Glacier Express, efficient cable cars and funiculars, and well-connected bus routes.</p>
+                        <div class="reservation-btn">
+                            <button onclick="makeReservation('Swiss Alps')">Make a Reservation</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="destination-col">
+                    <img src="img/banff.jpg" alt="Banff">
+                    <div class="destination-title">
+                        <h2>Banff</h2>
+                        <p>$150 - $800</p>
+                    </div>
+                    <div class="destination-icons">
+                        <p>Banff's majestic landscapes, pristine lakes, and abundant wildlife make it a top destination for outdoor enthusiasts.</p>
+                        <img src="img/mountains.svg" alt="Sunny"><p>Varies</p>
+                        <img src="img/plane.svg" alt="Plane"><p>Plane</p>
+                        <a class="more-btn">More</a>
+                    </div>
+                    <div class="destination-info" style="display: none">
+                        <p><strong>Location:</strong> Banff, located in the Canadian Rockies in Alberta, Canada, is within Banff National Park, Canada's first national park.</p>
+                        <p><strong>Culture:</strong> Banff is a cultural hub with a rich history rooted in the Canadian wilderness. The town hosts numerous festivals, art galleries, and museums.</p>
+                        <p><strong>Top Attractions:</strong> Explore the stunning landscapes of Banff National Park, including Lake Louise, Moraine Lake, and the Banff Gondola.</p>
+                        <p><strong>Places to Stay:</strong> Enjoy the rustic charm and luxury of accommodations such as the Fairmont Banff Springs, Rimrock Resort Hotel, and Baker Creek Mountain Resort.</p>
+                        <p><strong>General Tips:</strong> Winter for skiing and snowboarding, or summer for hiking, biking, and enjoying the lakes. Always be prepared for changing weather conditions in the mountains.</p>
+                        <p><strong>Transport Options:</strong> Banff is accessible by car from Calgary International Airport, with shuttle services available. Within Banff, Roam Transit buses and rental bikes are popular ways to explore the area.</p>
+                        <div class="reservation-btn">
+                            <button onclick="makeReservation('Banff')">Make a Reservation</button></div>
+                        </div>
+                </article>
+
+            <article class="destination-col">
+                <img src="img/madrid.jpg" alt="Madrid">
+                <div class="destination-title">
+                    <h2>Madrid</h2>
+                    <p>$150 - $800</p>
+                </div>
+                <div class="destination-icons">
+                    <p>Madrid offers a vibrant mix of historic landmarks, world-class museums, and lively tapas bars, making it a cultural hub of Spain.</p>
+                    <img src="img/sunny.svg" alt="Sunny"><p>Sunny</p>
+                    <img src="img/bus.svg" alt="Plane"><p>Bus</p>
+                    <a class="more-btn">More</a>
+                </div>
+                <div class="destination-info" style="display: none">
+                    <p><strong>Location:</strong> Madrid, the capital of Spain, is located in the heart of the country and is known for its rich history, vibrant culture, and bustling city life.</p>
+                    <p><strong>Culture:</strong> The city is home to world-renowned art museums like the Prado, Reina Sofía, and Thyssen-Bornemisza, as well as historic sites, traditional tapas bars, and lively flamenco performances.</p>
+                    <p><strong>Top Attractions:</strong> Visitors to Madrid can explore iconic landmarks such as the Royal Palace, Puerta del Sol, and Plaza Mayor. Other top attractions include Retiro Park, Gran Vía, and the bustling markets of El Rastro.</p>
+                    <p><strong>Places to Stay:</strong> Enjoy a variety of accommodations, luxury hotels like the Westin Palace, the Ritz-Carlton, and the NH Collection Madrid Paseo del Prado</p>
+                    <p><strong>General Tips:</strong> The best time to visit Madrid is during spring (March to May) and autumn (September to November) when the weather is pleasant and ideal for sightseeing.</p>
+                    <p><strong>Transport Options:</strong> The city has an efficient public transport system, including metro, buses, and taxis, making it easy to get around.</p>
+                    <div class="reservation-btn">
+                        <button onclick="makeReservation('Madrid')">Make a Reservation</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-col">
+                <img src="img/venezia.jpg" alt="Venezia">
+                <div class="destination-title">
+                    <h2>Venezia</h2>
+                    <p>$150 - $800</p>
+                </div>
+                <div class="destination-icons">
+                    <p>Venice's romantic canals, historic architecture, and iconic gondolas create an enchanting and unique cityscape.</p>
+                    <img src="img/cloudy-sun.svg" alt="Sunny"><p>Varies</p>
+                    <img src="img/bus.svg" alt="Plane"><p>Bus</p>
+                    <a class="more-btn">More</a>
+                </div>
+                <div class="destination-info" style="display: none">
+                    <p><strong>Location:</strong> Venice, known as Venezia in Italian, is located in northeastern Italy.</p>
+                    <p><strong>Culture:</strong> The city is famous for its beautiful architecture, art, music, and unique traditions such as the Venice Carnival, which features elaborate masks and costumes.</p>
+                    <p><strong>Top Attractions:</strong> Visitors to Venice can explore iconic landmarks such as St. Mark's Basilica, the Doge's Palace, and the Rialto Bridge. Other top attractions include the Grand Canal, the Gallerie dell'Accademia, and the charming island of Murano.</p>
+                    <p><strong>Places to Stay:</strong> Experience luxurious accommodations at hotels like The Gritti Palace, Aman Venice, and Hotel Danieli, as well as charming boutique hotels.</p>
+                    <p><strong>General Tips:</strong> The best time to visit Venice is during the spring (April to June) and fall (September to November) when the weather is mild.</p>
+                    <p><strong>Transport Options:</strong> Venice can be reached via Marco Polo Airport, followed by a water taxi or bus to the city. Within Venice, the primary mode of transport is by foot or by vaporetto (water bus).</p>
+                    <div class="reservation-btn">
+                        <button onclick="makeReservation('Venice')">Make a Reservation</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-col">
+                <img src="img/budapest.jpg" alt="Budapest">
+                <div class="destination-title">
+                    <h2>Budapest</h2>
+                    <p>$150 - $800</p>
+                </div>
+                <div class="destination-icons">
+                    <p>Budapest captivates with its stunning Danube river views, historic thermal baths, and vibrant cultural scene.</p>
+                    <img src="img/cloudy.svg" alt="Sunny"><p>Cloudy</p>
+                    <img src="img/bus.svg" alt="Plane"><p>Bus</p>
+                    <a class="more-btn">More</a>
+                </div>
+                <div class="destination-info" style="display: none">
+                    <p><strong>Location:</strong> Budapest, the capital of Hungary, is situated on the banks of the Danube River.</p>
+                    <p><strong>Culture:</strong> Budapest boasts a rich cultural heritage influenced by various periods of Hungarian history.</p>
+                    <p><strong>Top Attractions:</strong> Visitors to Budapest can explore iconic landmarks such as the Buda Castle, Parliament Building, and Fisherman's Bastion.</p>
+                    <p><strong>Places to Stay:</strong> Enjoy luxurious accommodations at hotels like the Four Seasons Hotel Gresham Palace, Aria Hotel Budapest, and Corinthia Hotel Budapest.</p>
+                    <p><strong>General Tips:</strong> The best time to visit Budapest is from March to May and September to November when the weather is mild and the city is less crowded.</p>
+                    <p><strong>Transport Options:</strong> Budapest is accessible via Budapest Ferenc Liszt International Airport, with excellent public transport options including buses, trams, and the metro.</p>
+                    <div class="reservation-btn">
+                        <button onclick="makeReservation('Budapest')">Make a Reservation</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-col">
+                <img src="img/amsterdam.jpg" alt="Amsterdam">
+                <div class="destination-title">
+                    <h2>Amsterdam</h2>
+                    <p>$150 - $800</p>
+                </div>
+                <div class="destination-icons">
+                    <p>Amsterdam charms with its picturesque canals, historic buildings, and vibrant cycling culture.</p>
+                    <img src="img/rain-sun.svg" alt="Sunny"><p>Varies</p>
+                    <img src="img/bus.svg" alt="Plane"><p>Bus</p>
+                    <a class="more-btn">More</a>
+                </div>
+                <div class="destination-info" style="display: none">
+                    <p><strong>Location:</strong> Amsterdam, the capital of the Netherlands, is located in the western part of the country.</p>
+                    <p><strong>Culture:</strong> Amsterdam is a cultural hub known for its artistic heritage, vibrant nightlife, and liberal attitudes. The city is home to world-famous museums such as the Van Gogh Museum, Rijksmuseum, and Anne Frank House.</p>
+                    <p><strong>Top Attractions:</strong> Visitors to Amsterdam can explore top attractions like the Anne Frank House, Van Gogh Museum, and the Heineken Experience.</p>
+                    <p><strong>Places to Stay:</strong> Experience luxury at hotels like the Waldorf Astoria Amsterdam, Conservatorium Hotel, and Pulitzer Amsterdam.</p>
+                    <p><strong>General Tips:</strong> The best time to visit Amsterdam is during spring (April to May) and fall (September to November) when the weather is mild and the city is less crowded.</p>
+                    <p><strong>Transport Options:</strong> Amsterdam is served by Schiphol Airport, with excellent public transport links to the city center. The city has an extensive tram, bus, and metro system, and is also very walkable and bike-friendly.</p>
+                    <div class="reservation-btn">
+                        <button onclick="makeReservation('Amsterdam')">Make a Reservation</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </section>
+
+    <section class="popular-destinations">
+        <h2>Top Choices This Summer</h2>
+        <p>Discover the world's most sought-after travel spots, perfect for your next adventure.</p>
+        <div class="popular-destinations-grid">
+            <img id="image1" src="img/banff.jpg" alt="Banff">
+            <img id="image2" src="img/London.jpg" alt="London">
+            <img id="image3" src="img/barcelona.jpg" alt="Barcelona">
+            <img id="image4" src="img/paris2.jpg" alt="Maldives">
+            <img id="image5" src="img/bora-bora.jpg" alt="Maldives">
+            <img id="image6" src="img/home.jpg" alt="Maldives">
+        </div>
+    </section>
+
+    <section class="footer" style="margin-top: 2%">
+        <h4>About Us</h4>
+        <p>At Wanderlust Travels, we believe in the transformative power of travel. Founded in 2010, our mission is to inspire and facilitate unforgettable journeys that create lifelong memories. We are dedicated to providing exceptional service and personalized travel experiences tailored to the unique needs and preferences of each traveler.</p>
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            window.searchDestinations = function() {
+                const searchInput = document.getElementById('search').value.toLowerCase();
+                const destinations = document.querySelectorAll('.destination-col');
+                destinations.forEach(destination => {
+                    const destinationText = destination.textContent.toLowerCase();
+                    if (destinationText.includes(searchInput)) {
+                        destination.style.display = '';
+                    } else {
+                        destination.style.display = 'none';
+                    }
+                });
+            };
+
+
+            window.makeReservation = function(destination) {
+                alert(`You are about to make a reservation for ${destination}!`);
+            };
+
+            const moreButtons = document.querySelectorAll('.more-btn');
+            const destinationsDetail = document.querySelector('.destinations-detail');
+            const destinationCols = document.querySelectorAll('.destination-col');
+
+            moreButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    const destinationCol = this.closest('.destination-col');
+                    const expandedCol = document.querySelector('.destination-col.expanded');
+
+
+                    if (expandedCol && expandedCol !== destinationCol) {
+                        expandedCol.classList.remove('expanded');
+                        expandedCol.querySelector('.destination-info').style.display = 'none';
+                        const prevButton = expandedCol.querySelector('.more-btn');
+                        prevButton.classList.remove('close-btn');
+                        prevButton.textContent = 'More';
+                    }
+
+
+                    destinationCol.classList.toggle('expanded');
+                    const destinationInfo = destinationCol.querySelector('.destination-info');
+                    destinationInfo.style.display = destinationInfo.style.display === 'block' ? 'none' : 'block';
+
+
+                    if (destinationCol.classList.contains('expanded')) {
+                        this.classList.add('close-btn');
+                        this.textContent = ' ';
+
+                        destinationCol.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    } else {
+                        this.classList.remove('close-btn');
+                        this.textContent = 'More';
+                    }
+
+
+                    if (destinationCol.classList.contains('expanded')) {
+
+                        destinationsDetail.prepend(destinationCol);
+
+
+                        destinationCols.forEach(col => {
+                            if (col !== destinationCol) {
+                                destinationsDetail.appendChild(col);
+                            }
+                        });
+                    } else {
+
+                        destinationCols.forEach(col => {
+                            destinationsDetail.appendChild(col);
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>

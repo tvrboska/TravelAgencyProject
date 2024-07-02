@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="img/logo.svg" alt="Logo">Logo</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box-sub">
+            <h1>About Us</h1>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="about-us-grid">
+            <img id="person1" src="img/person1.jpg" alt="Person1">
+            <img id="person2" src="img/person2.jpg" alt="Person2">
+            <img id="travel" src="img/travel.jpg" alt="Travel">
+        </div>
+        <div class="about-us-container">
+            <h1>Our Mission</h1>
+            <p>Our mission is to inspire and facilitate unforgettable travel experiences that create lifelong memories. We believe in the transformative power of travel.
+                We open doors to new adventures, foster cultural understanding, and enrich the lives of our customers through well-crafted journeys.
+                We strive to create experiences that go beyond the ordinary, ensuring every trip is a unique and
+                cherished memory. </p>
+            <p>We work tirelessly to ensure that each trip is perfectly planned, meticulously organized, and beautifully executed.</p>
+        </div>
+    </section>
+
+    <section class="core-values">
+        <h1>Our Core Values</h1>
+        <div class="core-values-row">
+            <div class="core-values-col">
+                <h2>01.</h2>
+                <h3>Customer Satisfaction</h3>
+                <p>Our top priority is to meet and exceed our customers' expectations.</p>
+            </div>
+
+            <div class="core-values-col">
+                <h2>02.</h2>
+                <h3>Integrity</h3>
+                <p>We operate with honesty and transparency in all our dealings.</p>
+            </div>
+
+            <div class="core-values-col">
+                <h2>03.</h2>
+                <h3>Innovation</h3>
+                <p>We continually seek new and creative ways to enhance our services.</p>
+            </div>
+        </div>
+        <img src="img/building.jpg" alt="Building">
+    </section>
+
+    <!-- User Comments Section -->
+    <section class="user-comments">
+        <div class="user-comments-container">
+            <h2>Share Your Experience</h2>
+            <p>Write your comment</p>
+            <div class="comment-form-styling">
+                <form id="comment-form">
+                    <label for="user-name">Your Name:</label>
+                    <input type="text" id="user-name" name="user-name" required>
+
+                    <label for="user-comment">Your Comment:</label>
+                    <textarea id="user-comment" name="user-comment" rows="4" required></textarea>
+
+                    <label for="user-rating">Your Rating:</label>
+                    <select id="user-rating" name="user-rating" required>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                    <button type="submit" id="submit-comment">Submit Comment</button>
+                </form>
+                <img src="img/banff.jpg" alt="Banff">
+            </div>
+            <div id="comments-section">
+                <h3>Comments</h3>
+                <ul id="comments-list">
+                    <!-- Comments will be dynamically added here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>At Wanderlust Travels, we believe in the transformative power of travel. Founded in 2010, our mission is to inspire and facilitate unforgettable journeys that create lifelong memories. We are dedicated to providing exceptional service and personalized travel experiences tailored to the unique needs and preferences of each traveler.</p>
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </section>
+
+    <script>
+
+        let isLoggedIn = false;
+
+
+        let comments = [
+            {
+                name: 'John Doe',
+                comment: 'Amazing experience! I really enjoyed every moment of it. The guides were fantastic and the scenery was breathtaking. Highly recommend this to everyone.',
+                rating: 5,
+                image: 'img/man.jpg'
+            },
+            {
+                name: 'Jane Smith',
+                comment: 'Really enjoyed my trip! The service was excellent and the destinations were perfect. Can\'t wait to book my next adventure.',
+                rating: 4,
+                image: 'img/woman.jpg'
+            }
+        ];
+
+
+        function renderComments() {
+            const commentsList = document.getElementById('comments-list');
+            commentsList.innerHTML = ''; // Clear the list first
+            comments.forEach(comment => {
+                const commentItem = document.createElement('li');
+                commentItem.classList.add('comment-item');
+                commentItem.innerHTML = `
+            <img src="${comment.image}" alt="User Image">
+            <div class="comment-content">
+                <strong>${comment.name}</strong><br>
+                <p>${comment.comment}</p>
+                <span class="rating">Rating: ${comment.rating}/5</span>
+            </div>`;
+                commentsList.appendChild(commentItem);
+            });
+        }
+
+
+        renderComments();
+
+
+        document.getElementById('submit-comment').addEventListener('click', function(event) {
+            if (!isLoggedIn) {
+                event.preventDefault();
+                alert('You need to login first!');
+            } else {
+                event.preventDefault();
+
+                const userName = document.getElementById('user-name').value;
+                const userComment = document.getElementById('user-comment').value;
+                const userRating = document.getElementById('user-rating').value;
+
+                const userImage = 'https://via.placeholder.com/50';
+
+                comments.push({
+                    name: userName,
+                    comment: userComment,
+                    rating: parseInt(userRating),
+                    image: userImage
+                });
+                renderComments();
+                document.getElementById('comment-form').reset();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Booking</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="..." crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="img/logo.svg" alt="Logo">Logo</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="destinations.html">Destinations</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box-sub">
+            <h1>Booking</h1>
+        </div>
+    </section>
+
+
+    <main>
+        <div class="choosing-destination-style">
+            <section class="choosing-destination">
+                <h1>Where Would You Like To Go?</h1>
+                <label for="choice">To:</label>
+                <select id="choice" name="choice" required>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Bora Bora">Bora Bora</option>
+                    <option value="Banff">Banff</option>
+                    <option value="Swiss Alps">Swiss Alps</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Venezia">Venezia</option>
+                    <option value="Budapest">Budapest</option>
+                    <option value="Amsterdam">Amsterdam</option>
+                </select>
+            </section>
+            <!-- Flight Booking -->
+            <section id="flight-booking" class="flight-booking">
+                <div class="flight-booking-container">
+                    <h2>Flight Booking</h2>
+                    <form id="flight-booking-form">
+                        <fieldset>
+                            <legend>Trip Type</legend>
+                            <div class="radio-buttons">
+                                <input type="radio" id="round-trip" name="trip-type" value="round-trip" required>
+                                <label for="round-trip">Round Trip</label>
+                                <input type="radio" id="one-way" name="trip-type" value="one-way">
+                                <label for="one-way">One Way</label>
+                            </div>
+                        </fieldset>
+                        <div class="flight-from-to">
+                            <label for="flight-from">From:</label>
+                            <input list="flight-from-options" id="flight-from" name="flight-from" required>
+                            <datalist id="flight-from-options">
+                                <option value="Skopje">Skopje</option>
+                            </datalist>
+                            <label for="flight-to">To:</label>
+                            <select id="flight-to" name="flight-to" required>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Bora Bora">Bora Bora</option>
+                                <option value="Banff">Banff</option>
+                            </select>
+                        </div>
+
+                        <label for="flight-departure-date">Departure:</label>
+                        <input type="datetime-local" id="flight-departure-date" name="flight-departure-date" required>
+                        <div id="return-date-container">
+                            <label for="flight-return-date">Return:</label>
+                                <input type="datetime-local" id="flight-return-date" name="flight-return-date">
+                        </div>
+
+                        <div class="passengers-options">
+                            <label for="flight-passengers-adults">Adults:</label>
+                            <input type="number" id="flight-passengers-adults" name="flight-passengers-adults" min="1" required>
+                            <label for="flight-passengers-children">Children:</label>
+                            <input type="number" id="flight-passengers-children" name="flight-passengers-children" min="0">
+                            <label for="flight-passengers-infants">Infants:</label>
+                            <input type="number" id="flight-passengers-infants" name="flight-passengers-infants" min="0">
+                         </div>
+                        <fieldset>
+                            <legend>Class</legend>
+                            <input type="radio" id="economy" name="class" value="economy" required>
+                            <label for="economy">Economy</label>
+                            <input type="radio" id="business" name="class" value="business">
+                            <label for="business">Business</label>
+                            <input type="radio" id="first-class" name="class" value="first-class">
+                            <label for="first-class">First Class</label>
+                        </fieldset>
+
+                        <div id="available-seats-container">
+                            <fieldset id="economy-seats" class="seats">
+                                <legend>Available Economy Seats</legend>
+                                <label><input type="checkbox" name="seat" value="E1"> E1</label>
+                                <label><input type="checkbox" name="seat" value="E2"> E2</label>
+                                <!-- Add more economy seats as needed -->
+                            </fieldset>
+                            <fieldset id="business-seats" class="seats">
+                                <legend>Available Business Seats</legend>
+                                <label><input type="checkbox" name="seat" value="B1"> B1</label>
+                                <label><input type="checkbox" name="seat" value="B2"> B2</label>
+                                <!-- Add more business seats as needed -->
+                            </fieldset>
+                            <fieldset id="first-class-seats" class="seats">
+                                <legend>Available First Class Seats</legend>
+                                <label><input type="checkbox" name="seat" value="F1"> F1</label>
+                                <label><input type="checkbox" name="seat" value="F2"> F2</label>
+                                <!-- Add more first class seats as needed -->
+                            </fieldset>
+                        </div>
+                        <button type="submit">Book Flight</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Bus Booking -->
+            <section id="bus-booking" class="bus-booking">
+                <div class="bus-booking-container">
+                    <h2>Bus Booking</h2>
+                    <form id="bus-booking-form">
+                        <fieldset>
+                            <legend>Trip Type</legend>
+                            <div class="radio-buttons">
+                                <input type="radio" id="round-trip-bus" name="trip-type" value="round-trip" required>
+                                <label for="round-trip">Round Trip</label>
+                                <input type="radio" id="one-way-bus" name="trip-type" value="one-way">
+                                <label for="one-way">One Way</label>
+                            </div>
+                        </fieldset>
+                        <div class="bus-from-to">
+                            <label for="bus-from">From:</label>
+                            <input list="bus-from-options" id="bus-from" name="bus-from" required>
+                            <datalist id="bus-from-options">
+                                <option value="Skopje">Skopje</option>
+                            </datalist>
+                            <label for="bus-to">To:</label>
+                            <select id="bus-to" name="bus-to" required>
+                                <option value="Bora Bora">Bora Bora</option>
+                                <option value="Swiss Alps">Swiss Alps</option>
+                                <option value="Madrid">Madrid</option>
+                                <option value="Venezia">Venezia</option>
+                                <option value="Budapest">Budapest</option>
+                                <option value="Amsterdam">Amsterdam</option>
+                            </select>
+                        </div>
+
+                        <label for="bus-departure-date">Departure:</label>
+                        <input type="datetime-local" id="bus-departure-date" name="bus-departure-date" required>
+                        <div id="return-date-container-bus">
+                            <label for="bus-return-date">Return:</label>
+                            <input type="datetime-local" id="bus-return-date" name="bus-return-date">
+                        </div>
+
+                        <div class="passengers-options">
+                            <label for="bus-passengers-adults">Adults:</label>
+                            <input type="number" id="bus-passengers-adults" name="bus-passengers-adults" min="1" required>
+                            <label for="bus-passengers-children">Children:</label>
+                            <input type="number" id="bus-passengers-children" name="bus-passengers-children" min="0">
+                            <label for="bus-passengers-infants">Infants:</label>
+                            <input type="number" id="bus-passengers-infants" name="bus-passengers-infants" min="0">
+                        </div>
+                        <button type="submit">Book Bus</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <section class="other-options" style="display: none">
+            <div class="other-options-container">
+                <h1>Would You Like To Book A Hotel And Rent A Car?</h1>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="hotel" name="options" value="hotel">
+                    <label for="hotel">Book a Hotel</label>
+                    <input type="checkbox" id="car" name="options" value="car">
+                    <label for="car">Rent a Car</label>
+                </div>
+            </div>
+
+            <div class="hotel-car-container">
+                <!-- Hotel Booking -->
+                <div class="hotel-booking">
+                    <div class="hotel-booking-container">
+                        <h2>Hotel Booking</h2>
+                        <form id="hotel-booking-form">
+                            <label for="hotel-location">Location:</label>
+                            <select id="hotel-location" name="hotel-location" required>
+                                <option value="Maldives">Maldives</option>
+                                <option value="Bora Bora">Bora Bora</option>
+                                <option value="Swiss Alps">Swiss Alps</option>
+                                <option value="Banff">Banff</option>
+                                <option value="Madrid">Madrid</option>
+                                <option value="Venezia">Venezia</option>
+                                <option value="Budapest">Budapest</option>
+                                <option value="Amsterdam">Amsterdam</option>
+                            </select>
+                            <label for="hotel-available">Hotels Available:</label>
+                            <select id="hotel-available" name="hotel-available" required>
+                                <!-- Options will be dynamically populated -->
+                            </select>
+                            <div class="hotel-options">
+                                <label for="room-type">Room:</label>
+                                <select id="room-type" name="room-type" required>
+                                    <option value="Standard Room">Standard Room (1 to 2 People)</option>
+                                    <option value="Family Room">Family Room (1 to 4 People)</option>
+                                    <option value="Private Room">Private Room (1 to 3 People)</option>
+                                </select>
+                                <label for="number-of-guests">Guests:</label>
+                                <input type="number" id="number-of-guests" name="number-of-guests" min="1" required>
+                            </div>
+                            <div class="hotel-arrival-date">
+                                <label for="hotel-arrival-date">Arrival Date & Time:</label>
+                                <input type="datetime-local" id="hotel-arrival-date" name="hotel-arrival-date" required>
+                            </div>
+                            <label for="hotel-departure-date">Departure Date:</label>
+                            <input type="datetime-local" id="hotel-departure-date" name="hotel-departure-date" required>
+                            <fieldset>
+                                <legend>Pick Up</legend>
+                                <div class="radio-buttons">
+                                    <input type="radio" id="yes-pick-up" name="pick-up" value="yes" required>
+                                    <label for="yes-pick-up">Yes, Please! Pick me up on arrival</label>
+                                    <input type="radio" id="no-pick-up" name="pick-up" value="no">
+                                    <label for="no-pick-up">No, Thanks! I'll get there on my own</label>
+                                </div>
+                            </fieldset>
+                            <div id="flight-number-section" style="display:none;">
+                                <label for="flight-number">Flight Number:</label>
+                                <input type="text" id="flight-number" name="flight-number">
+                            </div>
+                            <button type="submit">Book Accommodation</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Car Booking -->
+                <div class="car-booking">
+                    <div class="car-booking-container">
+                        <h2>Car Rental Booking</h2>
+                        <form id="car-rental-booking-form">
+                            <label for="car-rental-location">Pickup Location:</label>
+                            <input type="text" id="car-rental-location" name="car-rental-location" required>
+                            <label for="car-rental-date">Rental Date:</label>
+                            <input type="date" id="car-rental-date" name="car-rental-date" required>
+                            <label for="car-rental-duration">Duration (days):</label>
+                            <input type="number" id="car-rental-duration" name="car-rental-duration" min="1" required>
+                            <button type="submit">Book Car Rental</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>At Wanderlust Travels, we believe in the transformative power of travel. Founded in 2010, our mission is to inspire and facilitate unforgettable journeys that create lifelong memories. We are dedicated to providing exceptional service and personalized travel experiences tailored to the unique needs and preferences of each traveler.</p>
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="booking.html">Booking</a></li>
+            </ul>
+        </div>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin"></i>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            const roundTripRadio = document.getElementById('round-trip');
+            const oneWayRadio = document.getElementById('one-way');
+            const returnDateContainer = document.getElementById('return-date-container');
+
+            function updateReturnDateVisibility() {
+                if (oneWayRadio.checked) {
+                    returnDateContainer.style.display = 'none';
+                } else {
+                    returnDateContainer.style.display = 'block';
+                }
+            }
+
+            roundTripRadio.addEventListener('change', updateReturnDateVisibility);
+            oneWayRadio.addEventListener('change', updateReturnDateVisibility);
+
+            updateReturnDateVisibility();
+
+            const roundTripRadioBus = document.getElementById('round-trip-bus');
+            const oneWayRadioBus = document.getElementById('one-way-bus');
+            const returnDateContainerBus = document.getElementById('return-date-container-bus');
+
+            function updateReturnDateVisibilityBus() {
+                if (oneWayRadioBus.checked) {
+                    returnDateContainerBus.style.display = 'none';
+                } else {
+                    returnDateContainerBus.style.display = 'block';
+                }
+            }
+
+            roundTripRadioBus.addEventListener('change', updateReturnDateVisibilityBus);
+            oneWayRadioBus.addEventListener('change', updateReturnDateVisibilityBus);
+
+            updateReturnDateVisibilityBus();
+
+            const economyRadio = document.getElementById('economy');
+            const businessRadio = document.getElementById('business');
+            const firstClassRadio = document.getElementById('first-class');
+            const economySeats = document.getElementById('economy-seats');
+            const businessSeats = document.getElementById('business-seats');
+            const firstClassSeats = document.getElementById('first-class-seats');
+
+            function updateSeatVisibility() {
+                if (economyRadio.checked) {
+                    economySeats.style.display = 'block';
+                    businessSeats.style.display = 'none';
+                    firstClassSeats.style.display = 'none';
+                } else if (businessRadio.checked) {
+                    economySeats.style.display = 'none';
+                    businessSeats.style.display = 'block';
+                    firstClassSeats.style.display = 'none';
+                } else if (firstClassRadio.checked) {
+                    economySeats.style.display = 'none';
+                    businessSeats.style.display = 'none';
+                    firstClassSeats.style.display = 'block';
+                }
+            }
+
+            economyRadio.addEventListener('change', updateSeatVisibility);
+            businessRadio.addEventListener('change', updateSeatVisibility);
+            firstClassRadio.addEventListener('change', updateSeatVisibility);
+
+            updateSeatVisibility();
+
+            const hotelLocationSelect = document.getElementById('hotel-location');
+            const hotelAvailableSelect = document.getElementById('hotel-available');
+
+            const hotelOptions = {
+                "Maldives": ["Paradise Island Resort", "Sun Island Resort", "Adaaran Club Rannalhi"],
+                "Bora Bora": ["Four Seasons Resort", "St. Regis Bora Bora", "InterContinental Bora Bora"],
+                "Swiss Alps": ["The Chedi Andermatt", "Riffelalp Resort", "Badrutt's Palace Hotel"],
+                "Banff": ["Fairmont Banff Springs", "Rimrock Resort Hotel", "Moose Hotel & Suites"],
+                "Madrid": ["Hotel Ritz", "Gran Melia Palacio", "Hotel Wellington"],
+                "Venezia": ["The Gritti Palace", "Hotel Danieli", "Bauer Palazzo"],
+                "Budapest": ["Four Seasons Hotel Gresham Palace", "Aria Hotel Budapest", "New York Palace"],
+                "Amsterdam": ["Hotel Pulitzer", "The Dylan", "Conservatorium Hotel"]
+            };
+
+            function updateHotelOptions() {
+                const selectedLocation = hotelLocationSelect.value;
+                const hotels = hotelOptions[selectedLocation] || [];
+                hotelAvailableSelect.innerHTML = hotels.map(hotel => `<option value="${hotel}">${hotel}</option>`).join('');
+            }
+
+            hotelLocationSelect.addEventListener('change', updateHotelOptions);
+
+            updateHotelOptions();
+
+            const yesPickUpRadio = document.getElementById('yes-pick-up');
+            const noPickUpRadio = document.getElementById('no-pick-up');
+            const flightNumberSection = document.getElementById('flight-number-section');
+
+            function updateFlightNumberVisibility() {
+                if (yesPickUpRadio.checked) {
+                    flightNumberSection.style.display = 'block';
+                } else {
+                    flightNumberSection.style.display = 'none';
+                }
+            }
+
+            yesPickUpRadio.addEventListener('change', updateFlightNumberVisibility);
+            noPickUpRadio.addEventListener('change', updateFlightNumberVisibility);
+
+            updateFlightNumberVisibility();
+
+            const choiceSelect = document.getElementById('choice');
+            const flightBookingSection = document.getElementById('flight-booking');
+            const busBookingSection = document.getElementById('bus-booking');
+
+            function updateBookingSections() {
+                const selectedDestination = choiceSelect.value;
+                const flightDestinations = ['Maldives', 'Bora Bora', 'Banff'];
+
+                if (flightDestinations.includes(selectedDestination)) {
+                    flightBookingSection.style.display = 'flex';
+                    busBookingSection.style.display = 'none';
+                } else {
+                    flightBookingSection.style.display = 'none';
+                    busBookingSection.style.display = 'flex';
+                }
+            }
+
+            choiceSelect.addEventListener('change', updateBookingSections);
+
+            updateBookingSections();
+
+            const hotelCheckbox = document.getElementById('hotel');
+            const carCheckbox = document.getElementById('car');
+            const hotelBooking = document.querySelector('.hotel-booking');
+            const carBooking = document.querySelector('.car-booking');
+
+            function updateBookingVisibility() {
+                if (hotelCheckbox.checked && carCheckbox.checked) {
+                    hotelBooking.style.display = 'flex';
+                    carBooking.style.display = 'flex';
+                } else if (hotelCheckbox.checked) {
+                    hotelBooking.style.display = 'flex';
+                    carBooking.style.display = 'none';
+                } else if (carCheckbox.checked) {
+                    hotelBooking.style.display = 'none';
+                    carBooking.style.display = 'flex';
+                } else {
+                    hotelBooking.style.display = 'flex';
+                    carBooking.style.display = 'flex';
+                }
+            }
+
+            hotelCheckbox.addEventListener('change', updateBookingVisibility);
+            carCheckbox.addEventListener('change', updateBookingVisibility);
+
+            updateBookingVisibility();
+
+
+            const choosingDestinationSection = document.querySelector('.choosing-destination-style');
+            const otherOptionsSection = document.querySelector('.other-options');
+            const flightBookingForm = document.getElementById('flight-booking-form');
+            const busBookingForm = document.getElementById('bus-booking-form');
+
+            function showOtherOptionsSection(event) {
+                event.preventDefault();
+                choosingDestinationSection.style.display = 'none';
+                otherOptionsSection.style.display = 'block';
+            }
+
+            flightBookingForm.addEventListener('submit', showOtherOptionsSection);
+            busBookingForm.addEventListener('submit', showOtherOptionsSection);
+        });
+
+
+
+    </script>
+</body>
+</html>
